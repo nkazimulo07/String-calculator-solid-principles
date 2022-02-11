@@ -113,6 +113,20 @@ namespace StringCalculatorKataTest
         }
 
         [Test]
+        public void WhenUsingSquareBracketAsADelimiter_UsingAdd_ResultsReturnsSum()
+        {
+            // arrange
+            const int expected = 13;
+            const string input = "//[\n1[2[10";
+
+            // act 
+            var results = _stringCalculator.Add(input);
+
+            // assert
+            Assert.AreEqual(expected, results);
+        }
+
+        [Test]
         public void WhenStringWithNumberGreaterThanOneThousand_UsingAdd_ResultsReturnsSum()
         {
             // arrange
