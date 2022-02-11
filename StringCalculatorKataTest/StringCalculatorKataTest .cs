@@ -154,5 +154,11 @@ namespace StringCalculatorKataTest
             Assert.AreEqual(expected, results);
         }
 
+        [Test]
+        public void WhenStringWithNegativeNumber_UsingAdd_ResultsReturnsException()
+        {
+            Assert.Throws<System.Exception>(() => _stringCalculator.Add("1\n2,-3"));
+        }
+
     }
 }
