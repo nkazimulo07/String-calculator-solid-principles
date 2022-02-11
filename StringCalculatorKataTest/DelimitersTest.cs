@@ -3,7 +3,7 @@ using StringCalculatorKata;
 
 namespace StringCalculatorKataTest
 {
-    public class DelimersTest
+    public class DelimitersTest
     {
         private Delimiters delimiters;
 

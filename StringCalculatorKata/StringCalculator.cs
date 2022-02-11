@@ -2,10 +2,18 @@
 {
     public class StringCalculator
     {
-         SplitNumbers _splitNumbers = new SplitNumbers();
-         Delimiters _delimiters = new Delimiters();
-         ConvertNumbers _convertNumbers = new ConvertNumbers();
+       
+        private Delimiters _delimiters;
+        private SplitNumbers _splitNumbers;
+        private ConvertNumbers _convertNumbers;
 
+        public StringCalculator()
+        {
+            _splitNumbers = new SplitNumbers();
+            _delimiters = new Delimiters();
+            _convertNumbers = new ConvertNumbers();
+        }
+         
         public int Add(string numbers)
         {
             if (string.IsNullOrEmpty(numbers))

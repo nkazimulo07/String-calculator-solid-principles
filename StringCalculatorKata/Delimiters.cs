@@ -15,7 +15,7 @@ namespace StringCalculatorKata
             if (numbers.StartsWith("//"))
             {
                 var myDelimiter = numbers.Substring(2, numbers.IndexOf('\n') - 2);
-                if (myDelimiter.Contains("["))
+                if (myDelimiter.Contains("[") && myDelimiter.Contains("]"))
                 {
                     list.AddRange(GetMultipleDelimiters(myDelimiter));
                 }

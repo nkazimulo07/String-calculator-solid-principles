@@ -8,8 +8,6 @@ namespace StringCalculatorKata
 {
     public class SplitNumbers
     {
-        Delimiters _delimiters = new Delimiters();
-
         public string[] Split(string numbers, string[] delimiters)
         {
             if (numbers.StartsWith("//"))

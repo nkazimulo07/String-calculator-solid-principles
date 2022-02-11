@@ -6,26 +6,28 @@ namespace StringCalculatorKataTest
 {
     public class Tests
     {
-        private ConvertNumbers _convertNumbers;
+        private SplitNumbers  _splitNumbers;
 
         [SetUp]
         public void Setup()
         {
-            _convertNumbers = new ConvertNumbers();
+            _splitNumbers = new SplitNumbers();
         }
 
         [Test]
-        public void WhenListOfNumbersAndOneIsGreaterThanOneThousand_UsingGetNumbersLessThanOneThousand_ResultsReturnsList()
+        public void WhenStringWithNumbersAndArrayWithDelimiters_UsingSplit_ResultsReturnsSplitsNumbers()
         {
             // arrange
-            var expected = new List<int> { 200, 10 };
-            var input = new List<int>() { 1000, 200, 7000, 10 };
+            string[] expected = { "1", "8", "16", "40" };
+            const string input = "//[*][%][;]\n1*8%16;40";
+            string[] input2= { "*", "%", ";"};
 
             // act 
-            var results = _convertNumbers.GetNumbersLessThanOneThousand(input);
+            var results = _splitNumbers.Split(input, input2);
 
             // assert
             Assert.AreEqual(expected, results);
         }
+
     }
 }

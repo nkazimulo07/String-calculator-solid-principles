@@ -153,5 +153,6 @@ namespace StringCalculatorKataTest
             // assert
             Assert.AreEqual(expected, results);
         }
+
     }
 }
