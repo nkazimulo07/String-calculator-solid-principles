@@ -4,7 +4,16 @@
     {
         public List<int> GetNumbersLessThanOneThousand(List<int> convectedNumbers)
         {
-            return convectedNumbers.FindAll(x => x < 1000);
+            var numbersLessThanOneThousand = new List <int>();
+
+            foreach (int number in convectedNumbers)
+            {
+                if (number < 1000)
+                {
+                    numbersLessThanOneThousand.Add(number);
+                }
+            }
+            return numbersLessThanOneThousand;
         }
     }
 }
