@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StringCalculatorKata
 {
-    public class CheckNegativeNumbers
+    public class CheckNumbers
     {
         private CheckNumbersGreaterThanOneThousand _checkNumbersGreaterThanOneThousand;
 
-        public CheckNegativeNumbers()
+        public CheckNumbers()
         {
             _checkNumbersGreaterThanOneThousand = new CheckNumbersGreaterThanOneThousand();
         }
