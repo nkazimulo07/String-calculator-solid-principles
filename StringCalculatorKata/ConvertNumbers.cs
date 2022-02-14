@@ -3,11 +3,11 @@ namespace StringCalculatorKata
 {
     public class ConvertNumbers
     {
-        private CheckNegativeNumbers _checkNegativeNumbers;
+        private CheckNumbers _checkNumbers;
 
         public ConvertNumbers()
         {
-            _checkNegativeNumbers = new CheckNegativeNumbers();
+            _checkNumbers = new CheckNumbers();
         }
 
         public List<int> ConvertStringArrayToIntList(string[] numbers)
@@ -19,7 +19,7 @@ namespace StringCalculatorKata
                     result.Add(Convert.ToInt32(numbers[i]));
             }
 
-            return _checkNegativeNumbers.CheckNegatives(result);
+            return _checkNumbers.CheckNegatives(result);
         }
 
     }

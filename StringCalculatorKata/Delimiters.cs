@@ -8,7 +8,14 @@ namespace StringCalculatorKata
 {
     public class Delimiters
     {
-        public string[] GetDelimiter(string numbers)
+        private SplitNumbers _splitNumbers;
+
+        public Delimiters()
+        {
+            _splitNumbers = new SplitNumbers();
+        }
+
+        public List<int> GetDelimiter(string numbers)
         {
             var delimiters = new List<string> { ",", "\n" };
 
@@ -25,7 +32,7 @@ namespace StringCalculatorKata
                 }
             }
 
-            return delimiters.ToArray();
+            return _splitNumbers.Split(numbers,delimiters.ToArray());
         }
 
         public List<string> GetMultipleDelimiters(string delimiter)

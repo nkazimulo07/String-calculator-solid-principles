@@ -13,6 +13,7 @@
                     numbersLessThanOneThousand.Add(number);
                 }
             }
+
             return numbersLessThanOneThousand;
         }
     }

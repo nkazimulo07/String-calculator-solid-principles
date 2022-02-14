@@ -4,28 +4,22 @@
     {
        
         private Delimiters _delimiters;
-        private SplitNumbers _splitNumbers;
-        private ConvertNumbers _convertNumbers;
 
         public StringCalculator()
         {
-            _splitNumbers = new SplitNumbers();
             _delimiters = new Delimiters();
-            _convertNumbers = new ConvertNumbers();
         }
          
-        public int Add(string numbers)
+        public int Add(string number)
         {
-            if (string.IsNullOrEmpty(numbers))
+            if (string.IsNullOrEmpty(number))
             {
                 return 0;
             }
 
-            string[] delimiters = _delimiters.GetDelimiter(numbers);
-            var splitNumber = _splitNumbers.Split(numbers, delimiters);
-            var convertNumbers = _convertNumbers.ConvertStringArrayToIntList(splitNumber);
+            var numbers = _delimiters.GetDelimiter(number);
 
-            return SumOfNumbers(convertNumbers);
+            return SumOfNumbers(numbers);
         }
 
         public int SumOfNumbers(List<int> numbers)

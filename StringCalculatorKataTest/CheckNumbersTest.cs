@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace StringCalculatorKataTest
 {
-    public class CheckNegativesTest
+    public class CheckNumbersTest
     {
-        private CheckNegativeNumbers _checkNegativeNumbers;
+        private CheckNumbers _checkNegativeNumbers;
 
         [SetUp]
         public void Setup()
         {
-            _checkNegativeNumbers = new CheckNegativeNumbers();
+            _checkNegativeNumbers = new CheckNumbers();
         }
 
         [Test]

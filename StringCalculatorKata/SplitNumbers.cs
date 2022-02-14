@@ -8,7 +8,14 @@ namespace StringCalculatorKata
 {
     public class SplitNumbers
     {
-        public string[] Split(string numbers, string[] delimiters)
+        private ConvertNumbers _convertNumbers;
+
+        public SplitNumbers()
+        {
+            _convertNumbers = new ConvertNumbers();
+        }
+
+        public List<int> Split(string numbers, string[] delimiters)
         {
             if (numbers.StartsWith("//"))
             {
@@ -17,7 +24,7 @@ namespace StringCalculatorKata
 
             string[] result = numbers.Split(delimiters, StringSplitOptions.None);
 
-            return result;
+            return _convertNumbers.ConvertStringArrayToIntList(result);
         }
     }
 }
