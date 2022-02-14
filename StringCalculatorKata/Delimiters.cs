@@ -10,22 +10,22 @@ namespace StringCalculatorKata
     {
         public string[] GetDelimiter(string numbers)
         {
-            var list = new List<string> { ",", "\n" };
+            var delimiters = new List<string> { ",", "\n" };
 
             if (numbers.StartsWith("//"))
             {
                 var myDelimiter = numbers.Substring(2, numbers.IndexOf('\n') - 2);
                 if (myDelimiter.Contains("[") && myDelimiter.Contains("]"))
                 {
-                    list.AddRange(GetMultipleDelimiters(myDelimiter));
+                    delimiters.AddRange(GetMultipleDelimiters(myDelimiter));
                 }
                 else
                 {
-                    list.Add(myDelimiter);
+                    delimiters.Add(myDelimiter);
                 }
             }
 
-            return list.ToArray();
+            return delimiters.ToArray();
         }
 
         public List<string> GetMultipleDelimiters(string delimiter)

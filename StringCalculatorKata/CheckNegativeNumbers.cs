@@ -35,7 +35,7 @@ namespace StringCalculatorKata
             return _checkNumbersGreaterThanOneThousand.GetNumbersLessThanOneThousand(numbers);
         }
 
-        private string NegativeNumbers(string negativeNumbers)
+        private void NegativeNumbers(string negativeNumbers)
         {
             throw new Exception("negatives not allowed:  " + negativeNumbers);
         }

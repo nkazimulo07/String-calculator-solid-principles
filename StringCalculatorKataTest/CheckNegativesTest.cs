@@ -13,6 +13,7 @@ namespace StringCalculatorKataTest
         {
             _checkNegativeNumbers = new CheckNegativeNumbers();
         }
+
         [Test]
         public void WhenIntList_UsingCheckNegatives_ResultsReturnsException()
         {
