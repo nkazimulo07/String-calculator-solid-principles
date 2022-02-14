@@ -3,11 +3,11 @@
     public class StringCalculator
     {
        
-        private Delimiters _delimiters;
+        private GetNumbers _getNumbers;
 
         public StringCalculator()
         {
-            _delimiters = new Delimiters();
+            _getNumbers = new GetNumbers();
         }
          
         public int Add(string number)
@@ -17,7 +17,7 @@
                 return 0;
             }
 
-            var numbers = _delimiters.GetDelimiter(number);
+            var numbers = _getNumbers.GetListOfNumber(number);
 
             return SumOfNumbers(numbers);
         }
