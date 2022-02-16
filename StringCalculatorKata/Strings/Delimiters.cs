@@ -9,7 +9,7 @@ namespace StringCalculatorKata
     public class Delimiters
     {
 
-        public string[] GetDelimiter(string numbers)
+        public List<string> GetDelimiter(string numbers)
         {
             var delimiters = new List<string> { ",", "\n" };
 
@@ -26,7 +26,7 @@ namespace StringCalculatorKata
                 }
             }
 
-            return delimiters.ToArray();
+            return delimiters;
         }
 
         public List<string> GetMultipleDelimiters(string delimiter)

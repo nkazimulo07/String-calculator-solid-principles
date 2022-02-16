@@ -26,7 +26,7 @@ namespace StringCalculatorKata
                 numbers = numbers.Substring(numbers.LastIndexOf('\n') + 1);
             }
 
-            string[] result = numbers.Split(delimiters, StringSplitOptions.None);
+            string[] result = numbers.Split(delimiters.ToArray(), StringSplitOptions.None);
 
             return _convertNumbers.ConvertStringArrayToIntList(result);
         }
